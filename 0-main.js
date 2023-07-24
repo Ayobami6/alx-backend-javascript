@@ -1,7 +1,5 @@
-#!/usr/bin/node
-import getNeighborhoodsList from './0x00-ES6_basic/2-arrow';
+import getSumOfHoods from './0x00-ES6_basic/3-default-parameter';
 
-// eslint-disable-next-line new-cap
-const neighborhoodsList = new getNeighborhoodsList();
-const res = neighborhoodsList.addNeighborhood('Noe Valley');
-console.log(res);
+console.log(getSumOfHoods(34));
+console.log(getSumOfHoods(34, 3));
+console.log(getSumOfHoods(34, 3, 4));
