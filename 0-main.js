@@ -1,4 +1,5 @@
 #!/usr/bin/node
-import { taskFirst, taskNext } from './0x00-ES6_basic/0-constants';
+import taskBlock from './0x00-ES6_basic/1-block-scoped';
 
-console.log(`${taskFirst()} ${taskNext()}`);
+console.log(taskBlock(true));
+console.log(taskBlock(false));
