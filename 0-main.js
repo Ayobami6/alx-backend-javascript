@@ -1,4 +1,8 @@
-import getResponseFromAPI from './0x01-ES6_promise/0-promise';
+import getFullResponseFromAPI from './0x01-ES6_promise/1-promise';
 
-const response = getResponseFromAPI();
-console.log(response instanceof Promise);
+console.log(`This is the resolved object ${getFullResponseFromAPI(true)}`);
+const result = getFullResponseFromAPI(true).then((data) => {
+  console.log(data.status);
+});
+console.log(result); // this will show promise status
+// console.log(getFullResponseFromAPI(false));
