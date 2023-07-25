@@ -1,7 +1,7 @@
-/* eslint-disable import/no-named-as-default */
-/* eslint-disable import/no-named-as-default-member */
-import createReportObject from './0x00-ES6_basic/12-createReportObject';
+import createIteratorObject from './0x00-ES6_basic/100-createIteratorObject';
+
 import createEmployeesObject from './0x00-ES6_basic/11-createEmployeesObject';
+import createReportObject from './0x00-ES6_basic/12-createReportObject';
 
 const employees = {
   ...createEmployeesObject('engineering', ['Bob', 'Jane']),
@@ -9,5 +9,9 @@ const employees = {
 };
 
 const report = createReportObject(employees);
-console.log(report.allEmployees);
-console.log(report.getNumberOfDepartments(report.allEmployees));
+
+const reportWithIterator = createIteratorObject(report);
+
+for (const item of reportWithIterator) {
+  console.log(item);
+}
