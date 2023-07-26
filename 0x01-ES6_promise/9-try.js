@@ -4,7 +4,7 @@ export default function gaurdrail(myFunction) {
     const stuff = myFunction();
     queue.push(stuff);
   } catch (err) {
-    queue.push(`Error ${err.message}`);
+    queue.push(`Error: ${err.message}`);
   } finally {
     queue.push('Guardrail was processed');
   }
