@@ -12,8 +12,13 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     const array = [];
     // loop through the settled promises response
     data.forEach((item) => {
-      array.push({ status: `${item.status}`, value: `${item.value}` });
+      if (item.status === 'fulfilled') {
+        array.push({ status: item.status, value: item.value });
+      } else {
+        array.push({ status: item.status, value: item.reason });
+      }
     });
+    // console.log(array);
     return array;
   });
   return promise;
