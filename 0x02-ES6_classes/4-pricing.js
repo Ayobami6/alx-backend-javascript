@@ -1,4 +1,8 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
+
+import Currency from './3-currency';
+
 export default class Pricing {
   constructor(amount, currency) {
     this._amount = amount;
@@ -26,7 +30,7 @@ export default class Pricing {
     return fullPrice;
   }
 
-  static concertPrice(amount, conversionRate) {
+  static convertPrice(amount, conversionRate) {
     return amount * conversionRate;
   }
 }
