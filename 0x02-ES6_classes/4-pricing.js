@@ -1,6 +1,4 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable no-underscore-dangle */
-
 import Currency from './3-currency';
 
 export default class Pricing {
