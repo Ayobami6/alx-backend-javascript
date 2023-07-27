@@ -1,8 +1,3 @@
-import asyncUploadUser from './0x01-ES6_promise/100-await';
+import initializeRooms from './0x02-ES6_classes/1-make_classrooms';
 
-const test = async () => {
-  const value = await asyncUploadUser();
-  console.log(value);
-};
-
-test();
+console.log(initializeRooms());

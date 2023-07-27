@@ -1,3 +1,4 @@
+/* eslint-disable function-paren-newline */
 /* eslint-disable implicit-arrow-linebreak */
 // create three fake promise
 const promise1 = new Promise((resolve) =>
