@@ -1,4 +1,4 @@
-const getListStudentsIds = (array) => {
+const getListStudentIds = (array) => {
   const temp = array;
   const idList = [];
   if (temp instanceof Array) {
@@ -9,4 +9,4 @@ const getListStudentsIds = (array) => {
   return idList;
 };
 
-export default getListStudentsIds;
+export default getListStudentIds;
