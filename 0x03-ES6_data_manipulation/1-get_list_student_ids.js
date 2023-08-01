@@ -1,10 +1,9 @@
 const getListStudentIds = (array) => {
   const temp = array;
-  const idList = [];
+  let idList = [];
   if (temp instanceof Array) {
-    temp.forEach((obj) => {
-      idList.push(obj.id);
-    });
+    idList = temp.map((obj) => obj.id);
+    return idList;
   }
   return idList;
 };
