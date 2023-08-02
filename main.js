@@ -1,7 +1,15 @@
 import getListStudents from './0x03-ES6_data_manipulation/0-get_list_students';
-import getStudentIdsSum from './0x03-ES6_data_manipulation/3-get_ids_sum';
+import updateStudentGradeByCity from './0x03-ES6_data_manipulation/4-update_grade_by_city';
 
-const students = getListStudents();
-const value = getStudentIdsSum(students);
+console.log(
+  updateStudentGradeByCity(getListStudents(), 'San Francisco', [
+    { studentId: 5, grade: 97 },
+    { studentId: 1, grade: 86 },
+  ]),
+);
 
-console.log(value);
+console.log(
+  updateStudentGradeByCity(getListStudents(), 'San Francisco', [
+    { studentId: 5, grade: 97 },
+  ]),
+);
