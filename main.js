@@ -1,15 +1,5 @@
-import getListStudents from './0x03-ES6_data_manipulation/0-get_list_students';
-import updateStudentGradeByCity from './0x03-ES6_data_manipulation/4-update_grade_by_city';
+import hasValuesFromArray from './0x03-ES6_data_manipulation/7-has_array_values';
 
-console.log(
-  updateStudentGradeByCity(getListStudents(), 'San Francisco', [
-    { studentId: 5, grade: 97 },
-    { studentId: 1, grade: 86 },
-  ]),
-);
-
-console.log(
-  updateStudentGradeByCity(getListStudents(), 'San Francisco', [
-    { studentId: 5, grade: 97 },
-  ]),
-);
+console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [1]));
+console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [10]));
+console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [1, 10]));
