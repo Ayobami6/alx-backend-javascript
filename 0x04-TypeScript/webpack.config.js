@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
-  entry: './task_1/js/main.ts',
+  entry: './task_2/js/main.ts',
   devtool: 'inline-source-map',
   module: {
     rules: [
