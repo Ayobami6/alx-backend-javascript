@@ -1,8 +1,15 @@
-import cleanSet from './0x03-ES6_data_manipulation/8-clean_set';
+import { queryAPI, weakMap } from './0x03-ES6_data_manipulation/100-weak';
 
-console.log(
-  cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'),
-);
-console.log(
-  cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), ''),
-);
+const endpoint = { protocol: 'http', name: 'getUsers' };
+weakMap.get(endpoint);
+
+queryAPI(endpoint);
+console.log(weakMap.get(endpoint));
+
+queryAPI(endpoint);
+console.log(weakMap.get(endpoint));
+
+queryAPI(endpoint);
+queryAPI(endpoint);
+queryAPI(endpoint);
+queryAPI(endpoint);
