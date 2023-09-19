@@ -1,4 +1,8 @@
 const fs = require('fs');
+const http = require('http');
+
+const DBPATH = process.argv[2].toString();
+const PORT = 1245;
 
 const countStudents = async (path) => {
   try {
@@ -18,7 +22,7 @@ const countStudents = async (path) => {
       }
     });
 
-    console.log(`Number of students: ${students.length}`);
+    let result = `Number of students: ${students.length}\n`;
 
     const fields = {};
 
@@ -33,16 +37,36 @@ const countStudents = async (path) => {
 
     // eslint-disable-next-line guard-for-in
     for (const field in fields) {
-      console.log(
-        `Number of students in${field}: ${fields[field].length}. List: ${fields[
-          field
-        ].join(', ')}`,
-      );
+      result += `Number of students in${field}: ${
+        fields[field].length
+      }. List: ${fields[field].join(', ')}\n`;
     }
+    return result;
   } catch (err) {
-    // console.log(err);
     throw new Error('Cannot load the database');
   }
 };
 
-module.exports = countStudents;
+const app = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  if (req.url === '/') {
+    res.write('Hello Holberton School!');
+    res.end();
+  } else if (req.url === '/students') {
+    res.write('This is the list of our students\n');
+    countStudents(DBPATH)
+      .then((data) => {
+        const transformedData = data;
+        res.end(transformedData.toString());
+      })
+      .catch((err) => {
+        res.statusCode = 404;
+        res.end(err.message.toString());
+      });
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
