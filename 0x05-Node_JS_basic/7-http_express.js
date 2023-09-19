@@ -64,6 +64,7 @@ app.get('/students', (req, res) => {
       res.send(['This is the list of our students', data].join('\n'));
     })
     .catch((err) => {
+      // eslint-disable-next-line prefer-template
       res.send('This is the list of our students\n' + err.message.toString());
     });
 });
