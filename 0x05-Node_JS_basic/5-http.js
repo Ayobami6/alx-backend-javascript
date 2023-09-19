@@ -37,7 +37,7 @@ const countStudents = async (path) => {
 
     // eslint-disable-next-line guard-for-in
     for (const field in fields) {
-      result += `Number of students in${field}: ${
+      result += `Number of students in ${field}: ${
         fields[field].length
       }. List: ${fields[field].join(', ')}\n`;
     }
