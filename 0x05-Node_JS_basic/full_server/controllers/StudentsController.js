@@ -20,7 +20,7 @@ class StudentsController {
           result.push(
             `Number of students in ${data}: ${
               sortedData[data].length
-            }. List: ${sortedData[data].join(', ')}\n`,
+            }. List: ${sortedData[data].join(', ')}`,
           );
         }
         res.status(200).send(result.join('\n'));
