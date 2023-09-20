@@ -1,0 +1,11 @@
+{
+  "name": "0x06-unittests_in_js",
+  "version": "1.0.0",
+  "description": "This project demonstrates how to write unit tests in Javascript using the Mocha framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Ayobami",
+  "license": "ISC"
+}
