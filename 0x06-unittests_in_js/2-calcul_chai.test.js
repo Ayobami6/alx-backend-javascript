@@ -2,7 +2,7 @@ const chai = require('chai');
 const { describe, it } = require('mocha');
 const expect = chai.expect;
 
-const calculateNumber = require('./1-calcul');
+const calculateNumber = require('./2-calcul_chai');
 
 describe('calculateNumber', () => {
   it('should return the sum of two numbers when given "SUM" as type', () => {
