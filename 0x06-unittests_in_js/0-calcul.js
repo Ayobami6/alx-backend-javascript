@@ -4,6 +4,4 @@ const calculateNumber = (a, b) => {
   return roundA + roundB;
 };
 
-// module.exports = calculateNumber;
-
-export calculateNumber;
+module.exports = calculateNumber;
