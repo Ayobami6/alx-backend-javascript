@@ -6,4 +6,4 @@ const calculateNumber = (a, b) => {
 
 // module.exports = calculateNumber;
 
-export cal
+export calculateNumber;
